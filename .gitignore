@@ -1,0 +1,8 @@
+/bin/
+/log/
+/result/
+.DS_Store
+*.csv
+*.png
+*.jpg
+*.jpeg

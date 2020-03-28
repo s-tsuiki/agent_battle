@@ -8,7 +8,7 @@ import simulation.Simulation;
 import simulation.Simulation2;
 
 public class Launcher {
-	public static final int[] seeds = new int[]{ 7, 11, 17, 19, 31, 57, 123, 203, 223, 331,
+	private static final int[] seeds = new int[]{ 7, 11, 17, 19, 31, 57, 123, 203, 223, 331,
 			347, 407, 431, 473, 523, 559, 601, 687, 657,
 			713, 761, 777, 809, 867, 897, 923, 957, 971,
 			1001, 1013, 1053, 1123, 1157, 1271, 1303,1307,
@@ -32,10 +32,10 @@ public class Launcher {
 
 		System.out.println("Game start!");
 
-//		//ex2-3
-//		simulation1();
-		//ex2-4
-		simulation2();
+		//ex2-3
+		simulation1();
+//		//ex2-4
+//		simulation2();
 
 		System.out.println("Game finish!");
 
@@ -47,7 +47,7 @@ public class Launcher {
 		//シミュレーション自体の回数
 		int simulation_time = 1;		//default:1
 		//1回のシミュレーション内のステップ数
-		int step = 1000;				//default:100000
+		int step = 100000;				//default:100000
 
 		//ログ出力(必要な時以外はfalseにすることをお勧めします)(ログを出力すると遅くなるので)
 		//バトルフィールドを出力するか
@@ -69,13 +69,13 @@ public class Launcher {
 		//シミュレーション自体の回数
 		int simulation_time = 1;		//default:1
 		//1回のシミュレーション内のステップ数
-		int step = 20;				//default:100000
+		int step = 100000;				//default:100000
 
 		//ログ出力(必要な時以外はfalseにすることをお勧めします)(ログを出力すると遅くなるので)
 		//バトルフィールドを出力するか
 		boolean print_battle_field = true;
 		//スコアの推移を出力するか
-		boolean print_score = false;
+		boolean print_score = true;
 
 		for(int i=0; i<simulation_time; i++) {
 			ISimulation simulation = new Simulation2(seeds[i], step, i,

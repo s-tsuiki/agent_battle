@@ -134,7 +134,6 @@ public class Field implements IField {
 		}
 
 		//確率の初期化
-//		double[] p_set = {0.05, 0.01, 0.001};
 		double[] ratio = {0.12, 0.48, 0.4};
 		List<Double> p_list = new ArrayList<Double>(width*height);
 

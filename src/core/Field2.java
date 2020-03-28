@@ -44,9 +44,6 @@ public class Field2 extends Field {
 			Collections.shuffle(start_pillar_list);
 			Pillar p = start_pillar_list.get(0);
 			start_pillar_list.remove(0);
-//			int index = (int)(rnd.NextUnif() * start_pillar_list.size());
-//			Pillar p = start_pillar_list.get(index);
-//			start_pillar_list.remove(index);
 			double x = p.x;
 			double y = p.y;
 
@@ -101,9 +98,6 @@ public class Field2 extends Field {
 					isPath = true;
 
 				wall_list.add(new IdPair(toId(new Coordinate((int)(x-0.5), (int)(y+0.5))), toId(new Coordinate((int)(x+0.5), (int)(y+0.5)))));
-//				map[toId(new Coordinate((int)(x-0.5), (int)(y+0.5)))][toId(new Coordinate((int)(x+0.5), (int)(y+0.5)))] = 0;
-//				map[toId(new Coordinate((int)(x+0.5), (int)(y+0.5)))][toId(new Coordinate((int)(x-0.5), (int)(y+0.5)))] = 0;
-//				current_wall_list.push(new Pillar(x, y+1));
 				y++;
 				break;
 			case 1:		//右移動
@@ -112,9 +106,6 @@ public class Field2 extends Field {
 					isPath = true;
 
 				wall_list.add(new IdPair(toId(new Coordinate((int)(x+0.5), (int)(y-0.5))), toId(new Coordinate((int)(x+0.5), (int)(y+0.5)))));
-//				map[toId(new Coordinate((int)(x+0.5), (int)(y-0.5)))][toId(new Coordinate((int)(x+0.5), (int)(y+0.5)))] = 0;
-//				map[toId(new Coordinate((int)(x+0.5), (int)(y+0.5)))][toId(new Coordinate((int)(x+0.5), (int)(y-0.5)))] = 0;
-//				current_wall_list.push(new Pillar(x+1, y));
 				x++;
 				break;
 			case 2:		//下移動
@@ -123,10 +114,6 @@ public class Field2 extends Field {
 					isPath = true;
 
 				wall_list.add(new IdPair(toId(new Coordinate((int)(x-0.5), (int)(y-0.5))), toId(new Coordinate((int)(x+0.5), (int)(y-0.5)))));
-//				map[toId(new Coordinate((int)(x-0.5), (int)(y-0.5)))][toId(new Coordinate((int)(x+0.5), (int)(y-0.5)))] = 0;
-//				map[toId(new Coordinate((int)(x+0.5), (int)(y-0.5)))][toId(new Coordinate((int)(x-0.5), (int)(y-0.5)))] = 0;
-
-//				current_wall_list.push(new Pillar(x, y-1));
 				y--;
 				break;
 			case 3:		//左移動
@@ -135,9 +122,6 @@ public class Field2 extends Field {
 					isPath = true;
 
 				wall_list.add(new IdPair(toId(new Coordinate((int)(x-0.5), (int)(y-0.5))), toId(new Coordinate((int)(x-0.5), (int)(y+0.5)))));
-//				map[toId(new Coordinate((int)(x-0.5), (int)(y-0.5)))][toId(new Coordinate((int)(x-0.5), (int)(y+0.5)))] = 0;
-//				map[toId(new Coordinate((int)(x-0.5), (int)(y+0.5)))][toId(new Coordinate((int)(x-0.5), (int)(y-0.5)))] = 0;
-//				current_wall_list.push(new Pillar(x-1, y));
 				x--;
 				break;
 			}
@@ -147,7 +131,6 @@ public class Field2 extends Field {
 		}
 		else {
 			Pillar before_p = current_wall_list.pop();
-			//追加
 			wall_list.remove(wall_list.size()-1);
 			extendWall(before_p.x, before_p.y);
 		}

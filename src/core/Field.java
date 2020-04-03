@@ -7,6 +7,7 @@ import java.util.List;
 import main.Sfmt;
 
 public class Field implements IField {
+	//ex2-3のフィールドを表すクラス
 
 	int height;
 	int width;
@@ -34,8 +35,7 @@ public class Field implements IField {
 		initializeField();
 	}
 
-	@Override
-	public void happen_event() {
+	void happen_event() {
 
 		for(int x=0;x<width;x++){
 			for(int y=0;y<height;y++){
@@ -47,8 +47,7 @@ public class Field implements IField {
 
 	}
 
-	@Override
-	public int get_event(Coordinate c) {
+	int get_event(Coordinate c) {
 
 		int x = c.getX();
 		int y = c.getY();

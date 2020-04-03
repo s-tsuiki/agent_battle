@@ -12,9 +12,9 @@ public class Agent implements IAgent {
 	}
 
 	@Override
-	public int action(Coordinate ePos, AgentStatus[] status,
+	public int action(Coordinate ePos, AgentStatus myStatus, AgentStatus eStatus,
 			int[][] map, int[][] event, double[][] p, int myScore, int eScore) {
-		return action.act(myPos, ePos, status, map, event, p, myScore, eScore);
+		return action.act(myPos, ePos, myStatus, eStatus, map, event, p, myScore, eScore);
 	}
 
 	@Override

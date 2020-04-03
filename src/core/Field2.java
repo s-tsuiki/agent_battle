@@ -10,6 +10,8 @@ import java.util.Objects;
 import main.Sfmt;
 
 public class Field2 extends Field {
+	//ex2-4のフィールドを表すクラス
+
 	private List<IdPair> wall_list = new ArrayList<IdPair>();
 	private Deque<Pillar> current_wall_list = new ArrayDeque<Pillar>();
 	private List<Pillar> start_pillar_list;

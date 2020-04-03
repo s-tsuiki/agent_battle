@@ -11,38 +11,35 @@ import tools.LogExporter;
 import tools.LogWriter;
 
 public class VirtualEnvironment implements IEnvironment {
+	//ex2-3
 
-	int time = 0;
-	IField field;
-	AgentManager agentManager;
-	Sfmt rnd;
-	int sim_number;
-	LogExporter lex;
-	LogWriter graphWriter;
-	LogWriter scoreWriter;
+	private int time = 0;
+	private Field field;
+	private AgentManager agentManager;
+	private Sfmt rnd;
+	private int sim_number;
+	private LogExporter lex;
+	private LogWriter graphWriter;
+	private LogWriter scoreWriter;
 
-	int counter = 0;
-	String[][] buffer;
+	private int counter = 0;
+	private String[][] buffer;
 
 	//エージェント
-	IAgent player1;
-	IAgent player2;
+	private IAgent player1;
+	private IAgent player2;
 
 	//プレイヤーのスコア
-	int score1 = 0;
-	int score2 = 0;
+	private int score1 = 0;
+	private int score2 = 0;
 
 	//フィールドの設定
-	final int width = 5;
-	final int height = 5;
+	private final int width = 5;
+	private final int height = 5;
 
 	//ログ表示設定
-	boolean print_battle_field;
-	boolean print_score;
-
-	public VirtualEnvironment() {
-
-	}
+	private boolean print_battle_field;
+	private boolean print_score;
 
 	public VirtualEnvironment(Sfmt rnd, int sim_number, LogExporter lex, boolean print_battle_field, boolean print_score) {
 		this.rnd = rnd;
@@ -133,7 +130,7 @@ public class VirtualEnvironment implements IEnvironment {
 
 	}
 
-	void printGraph() {
+	private void printGraph() {
 		String[][] map = new String[width+2][height+2];
 		double[] p_set = field.get_p_set();
 		double[][] p = field.getP();

@@ -5,6 +5,7 @@ import main.Sfmt;
 import tools.LogExporter;
 
 public class Simulation2 extends Simulation {
+	//ex2-4
 
 	public Simulation2(int seed, int step, int sim_number, String date, boolean print_battle_field, boolean print_score) {
 		rnd = new Sfmt(seed);

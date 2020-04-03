@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LogExporter {
+	//ログ出力管理クラス
 
 	private String logDirectory;
 	Map<String, LogWriter> writers = new HashMap<String, LogWriter>();

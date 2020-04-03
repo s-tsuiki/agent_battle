@@ -2,10 +2,6 @@ package core;
 
 public interface IField {
 
-	public void happen_event();
-
-	public int get_event(Coordinate c);
-
 	public int getMapInfo(Coordinate c1, Coordinate c2);
 
 	public int[][] getMap();

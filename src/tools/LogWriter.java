@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class LogWriter {
+	//ログ書き込みクラス
+
 	private File file;
 
 	public LogWriter(String filePath) {

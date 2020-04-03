@@ -28,6 +28,7 @@ public class Launcher {
 			3929, 3931, 3943, 3947, 3967, 3989, 4001, 4003,
 			4007 };
 
+	//ここがスタート
 	public static void main(String[] args) {
 
 		System.out.println("Game start!");

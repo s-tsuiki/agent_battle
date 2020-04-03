@@ -3,6 +3,7 @@ package core;
 import java.util.Objects;
 
 public class Coordinate {
+	//座標を表すクラス
 
 	private int x;
 	private int y;

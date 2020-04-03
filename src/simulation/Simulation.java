@@ -6,6 +6,7 @@ import main.Sfmt;
 import tools.LogExporter;
 
 public class Simulation implements ISimulation {
+	//ex2-3
 
 	int sim_step;
 	Sfmt rnd;

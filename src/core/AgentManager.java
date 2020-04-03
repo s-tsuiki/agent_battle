@@ -5,6 +5,7 @@ import agent.IAgent;
 import main.Sfmt;
 
 public class AgentManager {
+	//エージェントの管理を行うクラス
 
 	private final int agent_number = 2;
 
@@ -30,7 +31,7 @@ public class AgentManager {
 
 	}
 
-	public void checkStatus(int time, Sfmt rnd, IField field) {
+	void checkStatus(int time, Sfmt rnd, IField field) {
 
 		for(int i=0; i<agent_number; i++) {
 
@@ -59,7 +60,7 @@ public class AgentManager {
 
 	}
 
-	public int[] action(IField field, int score0, int score1) {
+	int[] action(IField field, int score0, int score1) {
 
 		//エージェントが行動(action = 0(上移動), 1(右移動), 2(下移動), 3(左移動),
 		//4(上攻撃), 5(右攻撃), 6(下攻撃), 7(左攻撃), 8(何もしない))
@@ -75,13 +76,13 @@ public class AgentManager {
 		if(status[0] != AgentStatus.Broken) {
 			AgentStatus[] s = new AgentStatus[agent_number];
 			System.arraycopy(status, 0, s, 0, status.length);
-			action[0] = player[0].action(c1, s, field.getMap(), field.getEvent(), field.getP(), score0, score1);
+			action[0] = player[0].action(c1, s[0], s[1], field.getMap(), field.getEvent(), field.getP(), score0, score1);
 		}
 
 		if(status[1] != AgentStatus.Broken) {
 			AgentStatus[] s = new AgentStatus[agent_number];
 			System.arraycopy(status, 0, s, 0, status.length);
-			action[1] = player[1].action(c0, s, field.getMap(), field.getEvent(), field.getP(), score1, score0);
+			action[1] = player[1].action(c0, s[1], s[0], field.getMap(), field.getEvent(), field.getP(), score1, score0);
 		}
 
 		int[] a = new int[agent_number];
@@ -89,7 +90,7 @@ public class AgentManager {
 		return a;
 	}
 
-	public void move(IField field) {
+	void move(IField field) {
 
 		for(int i=0; i<agent_number; i++) {
 			int x = pPos[i].getX();
@@ -130,7 +131,7 @@ public class AgentManager {
 		}
 	}
 
-	public void attack(int time) {
+	void attack(int time) {
 
 		//エージェント0(プレイヤー1)
 		if(status[1] == AgentStatus.Active) {

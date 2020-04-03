@@ -1,7 +1,7 @@
 package core;
 
-import agent.ActionA;
-import agent.ActionB;
+import agent.ActionA2;
+import agent.ActionB2;
 import agent.Agent;
 import agent.AgentStatus;
 import agent.IAction;
@@ -119,13 +119,13 @@ public class VirtualEnvironment2 implements IEnvironment {
 
 		//自分のエージェント
 		Sfmt rnd1 = new Sfmt(7);
-		IAction action1 = new ActionA(rnd1);
+		IAction action1 = new ActionA2(rnd1);
 		player1 = new Agent(action1);
 		agentManager.addAgent(player1, 0, 0);
 
 		//相手のエージェント
 		Sfmt rnd2 = new Sfmt(11);
-		IAction action2 = new ActionB(rnd2);
+		IAction action2 = new ActionB2(rnd2);
 		player2 = new Agent(action2);
 		agentManager.addAgent(player2, width-1, height-1);
 

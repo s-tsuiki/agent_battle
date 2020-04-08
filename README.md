@@ -34,12 +34,17 @@ Windows/macOS対応です。(Linuxは動作未確認)
 <img src="https://raw.github.com/wiki/s-tsuiki/agent_battle/images/explanation.png" alt="各色の説明">
 </div>
 
-* エージェント１(青)
-* エージェント２(緑)
-* アイテム(オレンジ)
-* 攻撃(赤)
-* 壁(黒)
-* 動けるマス(白)
+<div text-align="center">
+<ul>
+<li>エージェント１(青)</li>
+<li>エージェント２(緑)</li>
+<li>アイテム(オレンジ)</li>
+<li>攻撃(赤)</li>
+<li>壁(黒)</li>
+<li>動けるマス(白)</li>
+</ul>
+</div>
+
 
 ## ルール
 * 各エージェントはスコア0からスタートする

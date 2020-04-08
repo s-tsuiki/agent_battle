@@ -29,6 +29,18 @@ Windows/macOS対応です。(Linuxは動作未確認)
 「ActionA2.java」、「ActionB2.java」に各エージェントの戦略を記載してください。  
 **毎回ランダムに壁が生成されます。**
 
+## 各色の説明
+<div align="center">
+<img src="https://raw.github.com/wiki/s-tsuiki/agent_battle/images/explanation.png" alt="各色の説明">
+</div>
+
+* エージェント１(青)
+* エージェント２(緑)
+* アイテム(オレンジ)
+* 攻撃(赤)
+* 壁(黒)
+* 動けるマス(白)
+
 ## ルール
 * 各エージェントはスコア0からスタートする
 * 各ステップにエージェントは1マス移動するか、上下左右1方向に攻撃ができる
@@ -60,9 +72,6 @@ Windows/macOS対応です。(Linuxは動作未確認)
 毎ステップのエージェントの動きとフィールドの情報を表した画像と動画を出力するプログラム
 <div align="center">
 <img src="https://raw.github.com/wiki/s-tsuiki/agent_battle/images/battle_wall.png" alt="壁のない環境">
-</div>
-<br>
-<div align="center">
 <img src="https://raw.github.com/wiki/s-tsuiki/agent_battle/images/battle_wall.gif" alt="エージェントの動画">
 </div>
 

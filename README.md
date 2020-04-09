@@ -20,7 +20,7 @@ Windows/macOS対応です。(Linuxは動作未確認)
 壁のない環境で勝つ戦略を考えてもらいます。  
 「ActionA.java」、「ActionB.java」に各エージェントの戦略を記載してください。
 
-### 壁のある状況での対戦 (simulation2)  
+### 壁のある環境での対戦 (simulation2)  
 <div align="center">
 <img src="https://raw.github.com/wiki/s-tsuiki/agent_battle/images/battle_wall.png" alt="壁のない環境">
 </div>
@@ -34,7 +34,7 @@ Windows/macOS対応です。(Linuxは動作未確認)
 <img src="https://raw.github.com/wiki/s-tsuiki/agent_battle/images/explanation.png" alt="各色の説明">
 </div>
 
-<div text-align="center">
+<div align="center">
 <ul>
 <li>エージェント１(青)</li>
 <li>エージェント２(緑)</li>

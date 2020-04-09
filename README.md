@@ -34,7 +34,7 @@ Windows/macOS対応です。(Linuxは動作未確認)
 <img src="https://raw.github.com/wiki/s-tsuiki/agent_battle/images/explanation.png" alt="各色の説明">
 </div>
 
-<div align="center">
+<div style="display:flex;justify-content:center;">
 <ul>
 <li>エージェント１(青)</li>
 <li>エージェント２(緑)</li>
